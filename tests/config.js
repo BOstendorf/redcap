@@ -12,6 +12,6 @@ try {
 
 module.exports = {
   host: host,
-  path: getPath (),
-  token: getToken ()
+  path: getPath(),
+  token: getToken()
 }
