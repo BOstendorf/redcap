@@ -1,40 +1,17 @@
 'use strict';
 
-function getHost () {
-  var host = process.env.REDCAP_HOST;
+var apiData = require('../lib/utils/getAPIData.js');
 
-  if (host === undefined) {
-    throw "REDCAP_HOST missing from environment variables";
-  }
+var host;
 
-  return host;
-}
-
-function getPath () {
-  var path = process.env.REDCAP_API_PATH;
-
-  if (path === undefined) {
-    return "/api/";
-  }
-  return path;
-}
-
-function getToken () {
-  var token = process.env.REDCAP_API_KEY;
-
-  if (token === undefined) {
-    token = process.env.REDCAP_API_TOKEN;
-  }
-
-  if (token === undefined) {
-    throw "API token missing from environment variables";
-  }
-
-  return token;
+try {
+  host = apiData.getHost();
+} catch {
+  host = "redcap.uits.iu.edu";
 }
 
 module.exports = {
-  host: getHost (),
-  path: getPath (),
-  token: getToken ()
+  host: host,
+  path: apiData.getPath(),
+  token: apiData.getToken()
 }
