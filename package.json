@@ -11,8 +11,8 @@
     "url": "https://github.iu.edu/csi/redcap.js.git"
   },
   "dependencies": {
-    "querystring": "^0.2.0",
-    "request": "^2.81.0"
+    "chai": "^4.3.10",
+    "querystring": "^0.2.0"
   },
   "keywords": [
     "redcap"
@@ -20,6 +20,6 @@
   "author": "Center for Software and Innovation",
   "license": "Apache-2.0",
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "mocha": "^11.1.0"
   }
 }
