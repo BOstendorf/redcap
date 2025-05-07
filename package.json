@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "chai": "^4.3.10",
+    "form-data": "^4.0.2",
     "querystring": "^0.2.0"
   },
   "keywords": [
